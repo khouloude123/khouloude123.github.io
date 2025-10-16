@@ -1,0 +1,26 @@
+/* === Style global === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+
+header { background: #007BFF; color: white; padding: 20px 0; text-align: center; }
+header h1 { margin-bottom: 10px; }
+nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
+nav ul li { margin: 5px 15px; }
+nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+nav ul li a.active, nav ul li a:hover { text-decoration: underline; color: #FFD700; }
+
+section { flex: 1; max-width: 900px; margin: auto; padding: 30px 15px; }
+section h2 { color: #007BFF; margin-bottom: 15px; text-align: center; }
+
+.project { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s; }
+.project:hover { transform: scale(1.02); }
+
+.btn { display: inline-block; background: #007BFF; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; }
+.btn:hover { background: #0056b3; }
+
+footer { background: #333; color: white; text-align: center; padding: 15px 0; margin-top: auto; font-size: 0.9em; }
+
+@media (max-width: 600px) {
+    nav ul { flex-direction: column; }
+    nav ul li { margin: 8px 0; }
+}
