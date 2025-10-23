@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV | Mon Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -102,6 +101,25 @@
             color: #f39c12;
             text-decoration: none;
         }
+
+        /* Bouton de téléchargement stylé */
+        #downloadBtn {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 25px;
+            background-color: #f39c12;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        #downloadBtn:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -120,7 +138,7 @@
 
     <section class="cv-container">
         <div class="cv-photo">
-            <!-- Remplace photo.jpg par ton image -->
+            <!-- Remplace khouloud.jpeg par ton image -->
             <img src="khouloud.jpeg" alt="Photo de Khouloud Fakraoui">
         </div>
 
@@ -133,6 +151,9 @@
                 <p>📱 +216 21 877 745</p>
                 <p>📍 Tunisie</p>
             </div>
+
+            <!-- Bouton de téléchargement avec JavaScript -->
+            <button id="downloadBtn">Télécharger mon CV</button>
 
             <h2>Profil</h2>
             <p>Passionnée par le développement web, je conçois des interfaces modernes, ergonomiques et performantes. 
@@ -149,8 +170,7 @@
 
             <h2>Formation</h2>
             <ul>
-                <li><strong>Diplôme en Développement des Systèmes Informatiques</strong> – ISET tozeur
-                     (DSI22)</li>
+                <li><strong>Diplôme en Développement des Systèmes Informatiques</strong> – ISET Tozeur (DSI22)</li>
                 <li>Baccalauréat en Sciences Informatiques</li>
             </ul>
 
@@ -172,5 +192,18 @@
     <footer>
         <p>© 2025 - Mon Portfolio</p>
     </footer>
+
+    <!-- JavaScript pour le téléchargement -->
+    <script>
+        document.getElementById("downloadBtn").addEventListener("click", function() {
+            const link = document.createElement("a");
+            link.href = "mon_cv.pdf"; // Chemin vers ton PDF
+            link.download = "CV_Khouloud_Fakraoui.pdf"; // Nom du fichier téléchargé
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
 </body>
 </html>
+
