@@ -3,12 +3,110 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon CV | Portfolio</title>
+    <title>CV | Mon Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e1e2f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav ul li a.active {
+            border-bottom: 2px solid #f39c12;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .cv-photo {
+            flex: 1 1 250px;
+            text-align: center;
+        }
+
+        .cv-photo img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f39c12;
+        }
+
+        .cv-info {
+            flex: 2 1 400px;
+        }
+
+        h2 {
+            color: #1e1e2f;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            background: #1e1e2f;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .contact-info a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Mon CV</h1>
+        <h1>Mon CV Professionnel</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -20,12 +118,54 @@
         </nav>
     </header>
 
-    <section>
-        <h2>Consultez ou téléchargez mon CV</h2>
-        <p>
-            <a href="cv.pdf" download class="btn">📄 Télécharger mon CV</a>
-        </p>
-        <iframe src="cv.pdf" width="100%" height="600px"></iframe>
+    <section class="cv-container">
+        <div class="cv-photo">
+            <!-- Remplace photo.jpg par ton image -->
+            <img src="khouloud.jpeg" alt="Photo de Khouloud Fakraoui">
+        </div>
+
+        <div class="cv-info">
+            <h2>Khouloud Fakraoui</h2>
+            <p>🎓 Étudiante en DSI22 | 💻 Développeuse Web Passionnée</p>
+
+            <div class="contact-info">
+                <p>📧 <a href="mailto:khouloudefakraoui1@email.com">khouloudefakraoui1@email.com</a></p>
+                <p>📱 +216 21 877 745</p>
+                <p>📍 Tunisie</p>
+            </div>
+
+            <h2>Profil</h2>
+            <p>Passionnée par le développement web, je conçois des interfaces modernes, ergonomiques et performantes. 
+               Mon objectif est de créer des solutions innovantes qui allient esthétique et fonctionnalité.</p>
+
+            <h2>Compétences</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript, PHP</li>
+                <li>React, Node.js (bases)</li>
+                <li>MySQL, MongoDB</li>
+                <li>Git, GitHub</li>
+                <li>UI/UX Design, Figma</li>
+            </ul>
+
+            <h2>Formation</h2>
+            <ul>
+                <li><strong>Diplôme en Développement des Systèmes Informatiques</strong> – ISET Nabeul (DSI22)</li>
+                <li>Baccalauréat en Sciences Techniques</li>
+            </ul>
+
+            <h2>Expériences</h2>
+            <ul>
+                <li><strong>Stage de Développement Web</strong> – Création d’un site de gestion interne pour une petite entreprise.</li>
+                <li><strong>Projet Académique</strong> – Application web de suivi des étudiants (HTML, CSS, PHP, MySQL).</li>
+            </ul>
+
+            <h2>Langues</h2>
+            <ul>
+                <li>Français – Courant</li>
+                <li>Anglais – Bon niveau</li>
+                <li>Arabe – Langue maternelle</li>
+            </ul>
+        </div>
     </section>
 
     <footer>

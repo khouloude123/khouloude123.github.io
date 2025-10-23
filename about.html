@@ -5,6 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>À propos | Mon Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+        }
+
+        header {
+            background-color: #1e1e2f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav ul li a.active {
+            border-bottom: 2px solid #f39c12;
+        }
+
+        .about-section {
+            max-width: 1000px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-photo {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .about-photo img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 4px solid #f39c12;
+            object-fit: cover;
+        }
+
+        .about-text {
+            flex: 2 1 500px;
+        }
+
+        .about-text h2 {
+            color: #1e1e2f;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f39c12;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .about-text p {
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skills-list span {
+            background-color: #f39c12;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            background: #1e1e2f;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,13 +120,36 @@
         </nav>
     </header>
 
-    <section>
-        <h2>Qui suis-je ?</h2>
-        <p>Je m'appelle khouloud fakraoui, étudiante en DSI22. Passionnée par le web, j’aime créer des interfaces simples et efficaces.</p>
+    <section class="about-section">
+        <div class="about-photo">
+            <!-- Remplace photo.jpg par ton image -->
+            <img src="khouloud.jpeg" alt="Photo de Khouloud Fakraoui">
+        </div>
+
+        <div class="about-text">
+            <h2>Qui suis-je ?</h2>
+            <p>Je m'appelle <strong>Khouloud Fakraoui</strong>, étudiante en <strong>Développement des Systèmes Informatiques (DSI22)</strong>. 
+            Passionnée par le <strong>développement web</strong>, j’aime concevoir des interfaces simples, modernes et intuitives. 
+            Mon objectif est de créer des solutions digitales efficaces et esthétiques, tout en améliorant l’expérience utilisateur.</p>
+
+            <p>Autonome, curieuse et motivée, j’aime apprendre de nouvelles technologies et relever des défis techniques. 
+            Je souhaite poursuivre ma carrière en tant que <strong>développeuse web front-end ou full-stack</strong>.</p>
+
+            <h2>Compétences techniques</h2>
+            <div class="skills-list">
+                <span>HTML / CSS</span>
+                <span>JavaScript</span>
+                <span>PHP / MySQL</span>
+                <span>React</span>
+                <span>Git / GitHub</span>
+                <span>UI / UX Design</span>
+                <span>Figma</span>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>© 2025 - Mon Portfolio</p>
+        <p>© 2025 - Mon Portfolio | Réalisé par Khouloud Fakraoui</p>
     </footer>
 </body>
 </html>

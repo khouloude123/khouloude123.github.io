@@ -5,10 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil | Mon Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e1e2f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav ul li a.active {
+            border-bottom: 2px solid #f39c12;
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 40px auto;
+            max-width: 1000px;
+            border-radius: 10px;
+        }
+
+        .hero img {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f39c12;
+            margin: 20px;
+        }
+
+        .hero-text {
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            color: #1e1e2f;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .hero-text a {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #f39c12;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .hero-text a:hover {
+            background-color: #d98200;
+        }
+
+        section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        section h2 {
+            color: #1e1e2f;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            background: #1e1e2f;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur mon portfolio</h1>
+        <h1>Bienvenue sur mon Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Accueil</a></li>
@@ -20,13 +139,31 @@
         </nav>
     </header>
 
+    <section class="hero">
+        <!-- Remplace photo.jpg par ton image -->
+        <img src="khouloud.jpeg" alt="Photo de Khouloud Fakraoui">
+
+        <div class="hero-text">
+            <h1>Khouloud Fakraoui</h1>
+            <p>Étudiante en DSI22 et développeuse web passionnée.  
+               J’aime concevoir des interfaces modernes, fonctionnelles et créatives.</p>
+            <a href="cv.html">Voir mon CV</a>
+        </div>
+    </section>
+
     <section>
-        <h2>Bonjour 👋</h2>
-        <p>Je suis étudiante  en informatique et je développe des sites web modernes et élégants.</p>
+        <h2>Compétences principales</h2>
+        <div class="skills">
+            <div class="skill">HTML / CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">PHP / MySQL</div>
+            <div class="skill">React</div>
+            <div class="skill">Figma / UI Design</div>
+        </div>
     </section>
 
     <footer>
-        <p>© 2025 - Mon Portfolio</p>
+        <p>© 2025 - Mon Portfolio | Développé par Khouloud Fakraoui</p>
     </footer>
 </body>
 </html>

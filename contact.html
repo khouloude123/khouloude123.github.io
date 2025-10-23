@@ -5,6 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Mon Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+        }
+
+        header {
+            background-color: #1e1e2f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav ul li a.active {
+            border-bottom: 2px solid #f39c12;
+        }
+
+        .contact-section {
+            max-width: 700px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            color: #1e1e2f;
+            border-bottom: 3px solid #f39c12;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            resize: none;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #f39c12;
+            outline: none;
+            box-shadow: 0 0 5px rgba(243, 156, 18, 0.4);
+        }
+
+        button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d98200;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+
+        .contact-info a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            background: #1e1e2f;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,14 +132,24 @@
         </nav>
     </header>
 
-    <section>
+    <section class="contact-section">
         <h2>Envoyez-moi un message</h2>
-        <p>📧 Email : <a href="khouloudefakraoui1@email.com">khouloudefakraoui1@email.com</a></p>
-        <p>📱 Téléphone : +216 21877745</p>
+        <form action="mailto:khouloudefakraoui1@email.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+            <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <div class="contact-info">
+            <p>📧 Email : <a href="mailto:khouloudefakraoui1@email.com">khouloudefakraoui1@email.com</a></p>
+            <p>📱 Téléphone : +216 21 877 745</p>
+            <p>📍 Localisation : Tunisie</p>
+        </div>
     </section>
 
     <footer>
-        <p>© 2025 - Mon Portfolio</p>
+        <p>© 2025 - Mon Portfolio | Développé par Khouloud Fakraoui</p>
     </footer>
 </body>
 </html>
